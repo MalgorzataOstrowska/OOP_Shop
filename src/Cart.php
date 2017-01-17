@@ -27,7 +27,9 @@ class Cart{
         $sum = 0;
 
         foreach ($this->items as $item) {
-            $sum += $item->getQuantity()->getValue() * $item->getProduct()->getPrice()->getPrice();
+            $iloscZKoszyka = $item->getQuantity()->getQuantyty();
+            $cenaZaJeden = $item->getProduct()->getPrice()->getPrice();
+            $sum += $iloscZKoszyka*$cenaZaJeden;
         }
 
         return $sum;
