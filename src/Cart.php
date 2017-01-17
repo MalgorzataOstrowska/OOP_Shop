@@ -6,6 +6,3 @@
  * and open the template in the editor.
  */
 
-include_once 'src/Product.php';
-include_once 'src/Customer.php';
-include_once 'src/Cart.php';
