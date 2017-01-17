@@ -6,7 +6,7 @@ class Product{
     private $name;
     private $quantity;
     
-    public function __construct($id, $price, $name, $quantity) {
+    public function __construct($id, ProductPrice $price, $name, $quantity) {
         $this->id = $id;
         $this->price = $price;
         $this->name = $name;
@@ -18,6 +18,10 @@ class Product{
         return $this-> id;
     }
 
+    /**
+     * 
+     * @return ProductPrice
+     */
     public function getPrice(){
         return $this-> price;
     }
