@@ -40,4 +40,13 @@ echo $cart ->getCustomer()->getFirstName() . '<br>';
 $dziesiec_czekolad = new CartItem($czekolada, new Quantity(10));
 echo '<br>$dziesiec_czekolad: <br>';
 echo $dziesiec_czekolad ->getProduct()->getName() . ' ';
-echo $dziesiec_czekolad ->getQuantity()->getQuantyty() . ' ';
+echo $dziesiec_czekolad ->getQuantity()->getQuantyty() . '<br>';
+
+
+$koszykGosi = new Cart($gosia);
+echo '<br>$koszykGosi: <br>';
+$koszykGosi->addCartItem($dziesiec_czekolad);
+$koszykGosi->addCartItem($dziesiec_czekolad);
+
+//echo ($koszykGosi->getCartItems());
+var_dump($koszykGosi->getCartItems());
