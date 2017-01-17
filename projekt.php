@@ -35,5 +35,9 @@ echo $castomer1->getLastName() . '<br>';
 
 $cart = new Cart($castomer1);
 echo '<br>First name from Cart($castomer1): <br>';
-echo $cart ->getCustomer()->getFirstName();
+echo $cart ->getCustomer()->getFirstName() . '<br>';
 
+$dziesiec_czekolad = new CartItem($czekolada, new Quantity(10));
+echo '<br>$dziesiec_czekolad: <br>';
+echo $dziesiec_czekolad ->getProduct()->getName() . ' ';
+echo $dziesiec_czekolad ->getQuantity()->getQuantyty() . ' ';
