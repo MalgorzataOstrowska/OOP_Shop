@@ -16,7 +16,7 @@ $product3 = new Product(3, new ProductPrice(10), 'Wykałaczki', new Quantity(100
  
 //Dodawanie do koszyka produktów w odpowiedniej ilości
 $cart->addCartItem(
-    new CartItem($product1, new Quantity(2))
+    new CartItem($product1, new Quantity(12))
 );
  
 $cart->addCartItem(
@@ -25,3 +25,5 @@ $cart->addCartItem(
  
 // Podsumowanie
 echo "Podsumowanie koszyka:" . $cart->getTotalSum();
+
+
