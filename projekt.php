@@ -6,16 +6,16 @@ include_once 'library.php';
 
 // Przykład 1
 $prise = new ProductPrice(20);
-$czekolada = new Product(1, $prise,'czekolada',5);
+$herbata = new Product(1, $prise,'herbata',new Quantity(5));
 
 // Przykład 2
-$czekolada = new Product(1, new ProductPrice(40),'czekolada',5);
+$czekolada = new Product(1, new ProductPrice(40),'czekolada',new Quantity(10));
 echo '<br>Product Czekolada: <br>';
 echo $czekolada -> getId() . ' ';
 echo $czekolada -> getPrice() -> getPrice() . ' ';      // pierwszy fragment zwraca obiekt klasy Product 
                                                         // drugi zwraca atrybut z ProductPrise
 echo $czekolada ->getName() . ' ';
-echo $czekolada ->getQuantity() . '<br>';
+echo $czekolada ->getQuantity()->getQuantyty() . '<br>';
 
 $gosia = new Customer(1,'Malgorzata', 'Ostrowska');
 echo '<br>Customer Gosia: <br>';
