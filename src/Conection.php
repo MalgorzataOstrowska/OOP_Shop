@@ -35,4 +35,12 @@ class Connection
     {
         return $this->lastResult;
     }
+    
+    public function getLastId()
+    {
+        return $this->mysqli->insert_id;
+    }
+    
+    
+    
 }

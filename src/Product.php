@@ -6,8 +6,8 @@ class Product{
     protected $name;
     protected $quantity;
     
-    public function __construct($id, ProductPrice $price, $name, Quantity $quantity) {
-        $this->id = $id;
+    public function __construct(ProductPrice $price, $name, Quantity $quantity) {
+        $this->id = null;
         $this->price = $price;
         $this->name = $name;
         $this->quantity = $quantity;

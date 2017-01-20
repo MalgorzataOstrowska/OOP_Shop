@@ -11,8 +11,15 @@ class Quantity{
         $this->quantity = $quantity;
     }
     
+    
+    // Literówka część programu jej używa
     public function getQuantyty(){
         return $this->quantity;
     }
+    
+    // Reszta tego:
+    public function getQuantity(){
+        return $this->quantity;
+    }    
 }
 
