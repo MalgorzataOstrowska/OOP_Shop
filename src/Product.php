@@ -26,6 +26,9 @@ class Product{
         return $this-> price;
     }
     
+    public function setPrice(ProductPrice $price){
+        $this-> price = $price ;
+    }   
     
     public function getName(){
         return $this-> name;

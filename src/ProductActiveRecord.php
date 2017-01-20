@@ -39,6 +39,32 @@ class ProductActiveRecord extends Product
         $connection->query($sql);
     }
 
+    static public function load(Connection $connection, $id)
+    {
+        $sql = sprintf("SELECT * FROM product WHERE id = '%s'", $id);
+
+        $connection->query($sql);
+        // getLastResult() zwraca obiekt mysql_result
+        // mysqli_result->fetch_assoc() zwraca tablicę assocjacyjna
+
+        $productArray = $connection->getLastResult()->fetch_assoc();
+
+        $product = new ProductActiveRecord(
+            new ProductPrice($productArray['price']),
+            $productArray['name'],
+            new Quantity((int)$productArray['quantity'])
+        );
+
+        $product->id = $productArray['id'];
+
+        return $product;
+    }
+
     
+    static public function delete(Connection $connection, $id) {
+        $sql = sprintf("DELETE FROM product WHERE id='%s'", $id);
+        
+        $connection->query($sql);           
+    }
 }
 
