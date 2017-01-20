@@ -5,8 +5,8 @@ class CartItem{
     private $quantity;
     
     public function __construct(Product $product, Quantity $quantity) {
-        $productQuanitiy =  $product->getQuantity()->getQuantyty();
-        $cartItemQuanitiy =  $quantity->getQuantyty();
+        $productQuanitiy =  $product->getValue()->getValue();
+        $cartItemQuanitiy =  $quantity->getValue();
         
         if($cartItemQuanitiy >$productQuanitiy){
             //die('Nie mozna zamowic wiecej niz jest');
@@ -30,7 +30,7 @@ class CartItem{
      * 
      * @return Quantity
      */
-    public function getQuantity(){
+    public function getValue(){
         return $this->quantity;
     }
 }

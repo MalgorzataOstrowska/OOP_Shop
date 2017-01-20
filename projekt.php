@@ -15,7 +15,7 @@ echo $czekolada -> getId() . ' ';
 echo $czekolada -> getPrice() -> getPrice() . ' ';      // pierwszy fragment zwraca obiekt klasy Product 
                                                         // drugi zwraca atrybut z ProductPrise
 echo $czekolada ->getName() . ' ';
-echo $czekolada ->getQuantity()->getQuantyty() . '<br>';
+echo $czekolada ->getValue()->getValue() . '<br>';
 
 $gosia = new Customer(1,'Malgorzata', 'Ostrowska');
 echo '<br>Customer Gosia: <br>';
@@ -40,7 +40,7 @@ echo $cart ->getCustomer()->getFirstName() . '<br>';
 $dziesiec_czekolad = new CartItem($czekolada, new Quantity(10));
 echo '<br>$dziesiec_czekolad: <br>';
 echo $dziesiec_czekolad ->getProduct()->getName() . ' ';
-echo $dziesiec_czekolad ->getQuantity()->getQuantyty() . '<br>';
+echo $dziesiec_czekolad ->getValue()->getValue() . '<br>';
 
 
 $koszykGosi = new Cart($gosia);

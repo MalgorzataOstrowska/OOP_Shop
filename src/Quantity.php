@@ -12,14 +12,10 @@ class Quantity{
     }
     
     
-    // Literówka część programu jej używa
-    public function getQuantyty(){
+    public function getValue(){
         return $this->quantity;
     }
     
-    // Reszta tego:
-    public function getQuantity(){
-        return $this->quantity;
-    }    
+   
 }
 

@@ -15,7 +15,7 @@ class ProductActiveRecord extends Product
             $this->name,
             null,
             $this->price->getPrice(),
-            $this->quantity->getQuantity()
+            $this->quantity->getValue()
         );
 
         $connection->query($sql);
@@ -32,7 +32,7 @@ class ProductActiveRecord extends Product
             "UPDATE product SET name='%s', price='%s', quantity='%s' WHERE id='%s'",
             $this->name,
             $this->price->getPrice(),
-            $this->quantity->getQuantity(),
+            $this->quantity->getValue(),
             $this->id
         );
 

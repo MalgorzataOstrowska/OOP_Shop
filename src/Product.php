@@ -35,7 +35,7 @@ class Product{
      * 
      * @return Quantity
      */
-    public function getQuantity(){
+    public function getValue(){
         return $this-> quantity;
     }
     
