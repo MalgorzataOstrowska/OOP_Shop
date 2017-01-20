@@ -6,7 +6,7 @@ class ProductPrice{
     
     public function __construct($price) {
         if(!(is_numeric($price) && $price > 0)){
-            die('Wrong price');
+            die('Wrong price: '.$price);
         }
         $this->price = $price;
     }

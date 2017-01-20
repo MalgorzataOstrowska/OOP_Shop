@@ -66,5 +66,30 @@ class ProductActiveRecord extends Product
         
         $connection->query($sql);           
     }
+    
+    
+    static public function loadAll(Connection $connection)
+    {
+        $sql = sprintf("SELECT * FROM product");
+
+        $connection->query($sql);
+        // getLastResult() zwraca obiekt mysql_result
+        // mysqli_result->fetch_assoc() zwraca tablicę assocjacyjna
+
+        $list = [];
+        foreach ($connection->getLastResult() as $productArray){
+
+            $product = new ProductActiveRecord(
+                new ProductPrice((int)$productArray['price']),
+                $productArray['name'],
+                new Quantity((int)$productArray['quantity'])
+            );
+
+            $product->id = $productArray['id'];
+
+            $list[] =  $product;
+        }
+        return $list;
+    }    
 }
 

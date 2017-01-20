@@ -6,7 +6,7 @@ class Quantity{
     
     public function __construct($quantity) {
         if(!(is_numeric($quantity) && $quantity > 0)){
-            die('Wrong price');
+            die('Wrong quantity: '.$quantity);
         }
         $this->quantity = $quantity;
     }

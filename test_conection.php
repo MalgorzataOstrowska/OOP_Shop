@@ -35,6 +35,10 @@ $connection = new Connection($mysql);
 //
 //var_dump($product);
 
-$product = ProductActiveRecord::delete($connection, 30);
+//$product = ProductActiveRecord::delete($connection, 30);
+//
+//var_dump($product);
 
-var_dump($product);
+$list = ProductActiveRecord::loadAll($connection);
+
+var_dump($list);
