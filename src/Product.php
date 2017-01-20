@@ -1,10 +1,10 @@
 <?php
 
 class Product{
-    private $id;
-    private $price;
-    private $name;
-    private $quantity;
+    protected $id;
+    protected $price;
+    protected $name;
+    protected $quantity;
     
     public function __construct($id, ProductPrice $price, $name, Quantity $quantity) {
         $this->id = $id;
